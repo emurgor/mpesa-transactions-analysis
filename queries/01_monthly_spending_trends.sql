@@ -1,7 +1,6 @@
 --Business Question
--- 1.	What is my total spending per month and how does it compare to the previous month 
---— both in absolute and percentage terms?
---select top 5 * from mpesa_analysis.dbo.Transactions
+-- 1.	What is my total spending per month and how does it compare to the previous month both in absolute and percentage terms?
+-- Key finding: Spend is erratic, with it doubling by 100% in some months and others a -90% decline
 with monthlyspending as (
 SELECT
 EOMONTH(completion_time) as [month],
