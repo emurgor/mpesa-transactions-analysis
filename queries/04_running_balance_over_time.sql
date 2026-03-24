@@ -5,6 +5,6 @@ details,
 category,
 completion_time as TxnDate,
 withdrawn,
-SUM(withdrawn)over(ORDER by completion_time) as running_total
+SUM(balance)over(ORDER by completion_time) as running_total
 from mpesa_analysis.dbo.Transactions
 
